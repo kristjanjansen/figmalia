@@ -1,0 +1,11 @@
+<script type="module">
+  import { circlepoints } from "https://visualia.github.io/visualia/dist/visualia.js";
+  console.log(circlepoints);
+
+  parent.postMessage(
+    {
+      pluginMessage: { message: "createCircles", points: circlepoints(6, 100) },
+    },
+    "*"
+  );
+</script>
